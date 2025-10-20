@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solvana Cloud - Solusi Server Minecraft & Hosting</title>
+    <style>
+        /* --- Reset & Basic Setup --- */
+        :root {
+            --primary-color: #6a11cb; /* Warna ungu/biru untuk cloud */
+            --secondary-color: #2575fc; /* Warna biru cerah */
+            --accent-color: #ff6600;   /* Warna oranye untuk tombol (mirip Minecraft) */
+            --dark-color: #2a2a2a;
+            --light-color: #ffffff;
+            --grey-color: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--grey-color);
+            color: var(--dark-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* --- Header & Navigasi --- */
+        header {
+            background: var(--dark-color);
+            color: var(--light-color);
+            padding: 1rem 0;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--light-color);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- Hero Section (Banner Utama) --- */
+        .hero {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: var(--light-color);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--light-color);
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #e65c00;
+        }
+
+        /* --- Bagian Produk & Jasa --- */
+        #products {
+            padding: 3rem 0;
+        }
+
+        #products h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            color: var(--dark-color);
+        }
+
+        .product-grid {
+            display: grid;
+            /* Membuat grid responsif: 
+               - Coba muat kolom selebar 300px
+               - Jika tidak muat, buat jadi 1 kolom (1fr) */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            background: var(--light-color);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .product-card p {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-card .btn {
+            background: var(--secondary-color);
+        }
+
+        .product-card .btn:hover {
+            background: var(--primary-color);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--dark-color);
+            color: #aaa;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#" id="logo">Solvana Cloud</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#products">Produk Minecraft</a></li>
+                    <li><a href="#hosting">Hosting</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Selamat Datang di Solvana Cloud</h1>
+            <p>Solusi Terlengkap untuk Akun, Server, dan Hosting Minecraft Anda</p>
+            <a href="#products" class="btn">Lihat Semua Produk</a>
+        </div>
+    </section>
+
+    <main>
+        <section id="products" class="container">
+            <h2>Produk & Jasa Minecraft</h2>
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <h3>Akun Premium Minecraft</h3>
+                    <p>Dapatkan akun Minecraft Premium (Java & Bedrock) resmi, aman, dan bergaransi penuh.</p>
+                    <a href="#" class="btn">Pesan Sekarang</a>
+                </div>
+
+                <div class="product-card">
+                    <h3>Jasa Developer Plugin</h3>
+                    <p>Butuh plugin custom untuk server Anda? Tim developer ahli kami siap mewujudkannya.</p>
+                    <a href="#" class="btn">Konsultasi Gratis</a>
+                </div>
+
+                <div class="product-card">
+                    <h3>Server Premium Siap Pakai</h3>
+                    <p>Server Minecraft siap pakai dengan setup plugin premium, anti-lag, dan keamanan terjamin.</p>
+                    <a href="#" class="btn">Lihat Paket Server</a>
+                </div>
+
+                <div class="product-card">
+                    <h3>Jasa Backup Server</h3>
+                    <p>Amankan data server Anda. Kami menyediakan solusi backup otomatis harian yang handal.</p>
+                    <a href="#" class="btn">Info Selengkapnya</a>
+                </div>
+
+                <div class="product-card">
+                    <h3>Jasa Buat Skin Custom</h3>
+                    <p>Tampil beda dengan skin Minecraft eksklusif yang dibuat khusus oleh desainer kami.</p>
+                    <a href="#" class="btn">Lihat Galeri</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="hosting" class="container">
+            <h2>Paket Hosting</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>Shared Hosting</h3>
+                    <p>Hosting server Minecraft yang hemat dan handal. Cocok untuk komunitas kecil atau pemula.</p>
+                    <a href="#" class="btn">Pilih Paket Shared</a>
+                </div>
+
+                <div class="product-card">
+                    <h3>Private Hosting (VPS)</h3>
+                    <p>Performa maksimal tanpa gangguan. Dapatkan sumber daya penuh (CPU/RAM) untuk server besar Anda.</p>
+                    <a href="#" class="btn">Pilih Paket Private</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Solvana Cloud. Segala Kebutuhan Minecraft Anda Ada Di Sini.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
